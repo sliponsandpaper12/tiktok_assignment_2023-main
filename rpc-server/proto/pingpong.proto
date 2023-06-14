@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service PingPongService {
+  rpc Ping(PingRequest) returns (PongResponse) {}
+}
+
+message PingRequest {
+  string clientId = 1;
+}
+
+message PongResponse {
+  string message = 1;
+  int64 timestamp = 2;
+}
